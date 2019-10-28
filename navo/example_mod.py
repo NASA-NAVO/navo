@@ -25,7 +25,7 @@ def primes(imax, verbose=True):
 
     if verbose:
         print("Max value: {}".format(imax))
-    
+
     if imax > 10000:
         raise ValueError("imax should be <= 10000")
 
