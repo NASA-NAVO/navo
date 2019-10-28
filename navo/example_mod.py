@@ -1,7 +1,7 @@
 __all__ = ['primes', 'do_primes']
 
 
-def primes(imax):
+def primes(imax, verbose=False):
     """
     Returns prime numbers up to imax.
 
@@ -9,6 +9,8 @@ def primes(imax):
     ----------
     imax: int
         The number of primes to return. This should be less or equal to 10000.
+    verbose : bool
+        Default false. Prints extra output.
 
     Returns
     -------
@@ -21,6 +23,9 @@ def primes(imax):
     k = 0
     n = 2
 
+    if verbose:
+        print("Max value: {}".format(imax))
+    
     if imax > 10000:
         raise ValueError("imax should be <= 10000")
 
