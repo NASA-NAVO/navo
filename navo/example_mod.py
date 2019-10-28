@@ -47,7 +47,8 @@ def primes(imax, verbose=True):
 def do_primes(n, usecython=False):
     if usecython:
 
-        raise Exception("This template does not have the example C code included.")
+        raise Exception(
+            "This template does not have the example C code included.")
 
     else:
         print('Using pure python primes')
