@@ -1,7 +1,7 @@
 __all__ = ['primes', 'do_primes']
 
 
-def primes(imax, verbose=False):
+def primes(imax, verbose=True):
     """
     Returns prime numbers up to imax.
 
