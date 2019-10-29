@@ -12,9 +12,16 @@ else:
     # automatically made available when Astropy is installed. This means it's
     # not necessary to import them here, but we still need to import global
     # variables that are used for configuration.
-    from astropy.tests.plugins.display import (pytest_report_header,
-                                               PYTEST_HEADER_MODULES,
-                                               TESTED_VERSIONS)
+    try:
+        from pytest_astropy_header.display import (
+                    pytest_report_header,
+                    PYTEST_HEADER_MODULES,
+                    TESTED_VERSIONS)
+    except ImportError:
+        from astropy.tests.plugins.display import (
+                    pytest_report_header,
+                    PYTEST_HEADER_MODULES,
+                    TESTED_VERSIONS)
 
 from astropy.tests.helper import enable_deprecations_as_exceptions
 
